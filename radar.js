@@ -20,6 +20,14 @@ function init(h,w) {
          .anchor("top").add(pv.Label)
              .text(function(d) {return this.index + 1 + ".";}) 
              .textBaseline("left");
+  
+    // Label below radar
+    radar.add(pv.Label)
+         .left(w/2)
+         .top(h - 20)
+         .fillStyle("#aec7e8") 
+         .text("@basav's focus areas :) for 2013")
+         .font("16px sans-serif");
 
     //Techniques Label
     radar.add(pv.Label)
