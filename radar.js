@@ -21,13 +21,15 @@ function init(h,w) {
              .text(function(d) {return this.index + 1 + ".";}) 
              .textBaseline("left");
 
+    //Techniques Label
     radar.add(pv.Label)
-         .left(45)
+         .left(55)
          .top(18)
          .fillStyle("#aec7e8") 
          .text(radar_quadrants[0].name)
          .font(labelFont);
-  
+
+  ////Techniques Data Label
     radar.add(pv.Dot) 
         .data(radar_data.slice(radar_quadrants[0].start,radar_quadrants[0].end)) 
         .left(5) 
@@ -39,9 +41,10 @@ function init(h,w) {
         .fillStyle("#aec7e8") 
       .anchor("right").add(pv.Label).text(function(d) {return this.index + 1 + ". " + d.name;} );
 
+    //platforms
     radar.anchor("left").add(pv.Label)
          .left(5)
-         .top(h/2 + 18)
+         .top(h-180)
          .fillStyle("#aec7e8") 
          .text(radar_quadrants[2].name)
          .font(labelFont);
@@ -49,7 +52,7 @@ function init(h,w) {
     radar.add(pv.Dot) 
         .data(radar_data.slice(radar_quadrants[2].start,radar_quadrants[2].end)) 
         .left(5) 
-        .top(function() {return ((h/2) + 36 + this.index * 18);}) 
+        .top(function() {return ((h - 180) + 36 + this.index * 18);}) 
         .size(8) 
         .strokeStyle(null) 
         .angle(45)
@@ -57,9 +60,9 @@ function init(h,w) {
         .fillStyle("#aec7e8") 
       .anchor("right").add(pv.Label).text(function(d) {return this.index + 1 + radar_quadrants[2].start + ". " + d.name;} );
 
-
+  //Tools
   radar.anchor("left").add(pv.Label)
-       .left(w-200+30)  
+       .left(w-100)  
        .top(18)
        .text(radar_quadrants[1].name)
        .font(labelFont);
@@ -67,8 +70,8 @@ function init(h,w) {
 
   radar.add(pv.Dot) 
         .data(radar_data.slice(radar_quadrants[1].start,radar_quadrants[1].end)) 
-        .left(w-200+30) 
-        .top(function() {return (36 + this.index * 18);}) 
+        .left(w-90) 
+        .top(function() {return (46 + this.index * 18);}) 
         .size(8)
         .angle(45)
         .shape(function(d) {return (d.movement === 't' ? "triangle" : "circle");})         
@@ -76,17 +79,18 @@ function init(h,w) {
         .fillStyle("#aec7e8")         
         .anchor("right").add(pv.Label).text(function(d) {return this.index + 1 + radar_quadrants[1].start + ". " + d.name;} );
 
+  //Languages
   radar.anchor("left").add(pv.Label)
-       .left(w-200+30)
-       .top(h/2 + 18)
+       .left(w-100)
+       .top(h - 180)
        .fillStyle("#aec7e8") 
        .text(radar_quadrants[3].name)
        .font(labelFont);
 
     radar.add(pv.Dot) 
         .data(radar_data.slice(radar_quadrants[3].start,radar_quadrants[3].end)) 
-        .left(w-200+30) 
-        .top(function() {return ((h/2) + 36 + this.index * 18);}) 
+        .left(w-90) 
+        .top(function() {return ((h-180) + 36 + this.index * 18);}) 
         .size(8) 
         .strokeStyle(null) 
         .angle(45)
