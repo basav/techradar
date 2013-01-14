@@ -81,7 +81,7 @@ function init(h,w) {
 
   //Languages
   radar.anchor("left").add(pv.Label)
-       .left(w-100)
+       .left(w-140)
        .top(h - 180)
        .fillStyle("#aec7e8") 
        .text(radar_quadrants[3].name)
@@ -89,7 +89,7 @@ function init(h,w) {
 
     radar.add(pv.Dot) 
         .data(radar_data.slice(radar_quadrants[3].start,radar_quadrants[3].end)) 
-        .left(w-90) 
+        .left(w-140) 
         .top(function() {return ((h-180) + 36 + this.index * 18);}) 
         .size(8) 
         .strokeStyle(null) 
