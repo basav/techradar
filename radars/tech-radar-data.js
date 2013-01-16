@@ -2,7 +2,7 @@ var radar_data = [
 {"name":"Polyglot Persistence", "pc":{"r":125,"t":140},"movement":"c"},   
 {"name":"Mobile first", "pc":{"r":65,"t":170},"movement":"c"},  
 {"name":"Kanban", "pc":{"r":135,"t":170},"movement":"c"},   
-{"name":"Funcational Programming", "pc":{"r":65,"t":120},"movement":"c"},  
+{"name":"Functional Programming", "pc":{"r":65,"t":120},"movement":"c"},  
 {"name":"Gradle", "pc":{"r":115,"t":80},"movement":"c"},   
 {"name":"D3", "pc":{"r":172,"t":35},"movement":"c"},
 {"name":"Rake for Java", "pc":{"r":179,"t":60},"movement":"c"},
